@@ -9,6 +9,20 @@ const links = [
 
 export function Nav() {
   return (
+    <>
+    <motion.a
+      href="#top"
+      initial={{ x: -40, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ delay: 0.3, duration: 0.8 }}
+      className="fixed top-6 left-6 z-50 group"
+      aria-label="Navele Neehar — Home"
+    >
+      <div className="glass flex h-12 w-12 items-center justify-center rounded-2xl font-display text-lg tracking-tight transition-transform group-hover:scale-105">
+        <span>N</span>
+        <span className="text-primary -ml-1">N</span>
+      </div>
+    </motion.a>
     <motion.nav
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -25,5 +39,6 @@ export function Nav() {
         ))}
       </div>
     </motion.nav>
+    </>
   );
 }
