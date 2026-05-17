@@ -109,11 +109,25 @@ export function Contact() {
           </button>
         </motion.form>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <a href="https://github.com/Neehar112233" target="_blank" rel="noreferrer" className="group inline-flex items-center gap-3 rounded-full bg-primary px-8 py-5 font-medium text-primary-foreground transition-transform hover:scale-[1.02]">
-            Find me on GitHub
-            <span className="transition-transform group-hover:translate-x-1">↗</span>
-          </a>
+        <div className="mt-10 flex flex-wrap justify-center gap-3">
+          {[
+            { label: "GitHub", href: "https://github.com/Neehar112233" },
+            { label: "LinkedIn", href: "https://www.linkedin.com/in/neehar-navele" },
+            { label: "Instagram", href: "https://instagram.com/neehar_navele" },
+            { label: "WhatsApp", href: "https://wa.me/917989970791" },
+            { label: "GeeksforGeeks", href: "https://www.geeksforgeeks.org/user/neeharnavele" },
+          ].map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noreferrer"
+              className="group inline-flex items-center gap-2 rounded-full border border-border bg-card/40 px-5 py-3 text-sm font-medium backdrop-blur-md transition-colors hover:border-primary hover:text-primary"
+            >
+              {s.label}
+              <span className="transition-transform group-hover:translate-x-0.5">↗</span>
+            </a>
+          ))}
         </div>
 
         <div className="mt-32 flex flex-wrap items-center justify-between gap-4 border-t border-border pt-8 text-sm text-muted-foreground">
