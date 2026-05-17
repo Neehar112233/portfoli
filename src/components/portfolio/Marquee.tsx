@@ -1,4 +1,4 @@
-const items = ["React", "TypeScript", "Python", "Node.js", "AI / ML", "Tailwind", "PostgreSQL", "Three.js", "Next.js", "Framer Motion"];
+const items = ["Java", "Python", "JavaScript"];
 
 export function Marquee() {
   return (
